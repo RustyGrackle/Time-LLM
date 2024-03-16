@@ -6,7 +6,7 @@ data_dict = {
     'ETTh2': Dataset_ETT_hour,
     'ETTm1': Dataset_ETT_minute,
     'ETTm2': Dataset_ETT_minute,
-    'gujarat': Dataset_Gujarat,
+    'rearranged_gujarat': Dataset_Gujarat,
     'custom': Dataset_Custom,
     'm4': Dataset_M4,
 }
