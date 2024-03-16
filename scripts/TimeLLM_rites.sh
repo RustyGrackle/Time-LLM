@@ -18,7 +18,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
   --data_path rearranged_gujarat.csv \
   --model_id gujarat_512_96 \
   --model $model_name \
-  --data rearranged_gujrat \
+  --data rearranged_gujarat \
   --features S \
   --seq_len 512 \
   --label_len 48 \
