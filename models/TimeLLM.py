@@ -139,8 +139,18 @@ class Model(nn.Module):
             max_values_str = str(max_values[b].tolist()[0])
             median_values_str = str(medians[b].tolist()[0])
             lags_values_str = str(lags[b].tolist())
+            # prompt_ = (
+            #     f"<|start_prompt|>Dataset description: The Electricity Transformer Temperature (ETT) is a crucial indicator in the electric power long-term deployment."
+            #     f"Task description: forecast the next {str(self.pred_len)} steps given the previous {str(self.seq_len)} steps information; "
+            #     "Input statistics: "
+            #     f"min value {min_values_str}, "
+            #     f"max value {max_values_str}, "
+            #     f"median value {median_values_str}, "
+            #     f"the trend of input is {'upward' if trends[b] > 0 else 'downward'}, "
+            #     f"top 5 lags are : {lags_values_str}<|<end_prompt>|>"
+            # )
             prompt_ = (
-                f"<|start_prompt|>Dataset description: The Electricity Transformer Temperature (ETT) is a crucial indicator in the electric power long-term deployment."
+                f"<|start_prompt|>Dataset description: Dataset contains electricity consumption of Trains in mega watt (MW) unit of location: Gujarat, India."
                 f"Task description: forecast the next {str(self.pred_len)} steps given the previous {str(self.seq_len)} steps information; "
                 "Input statistics: "
                 f"min value {min_values_str}, "
