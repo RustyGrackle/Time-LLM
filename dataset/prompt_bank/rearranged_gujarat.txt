@@ -1,0 +1,1 @@
+Dataset contains electricity consumption of Trains in mega watt (MW) unit of location: Gujarat, India. Dataset has two columns only - date and Actual(MW). We have to do day ahead prediction for this (MW) load.
