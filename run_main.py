@@ -37,16 +37,16 @@ parser.add_argument('--model', type=str, required=True, default='Autoformer',
 parser.add_argument('--seed', type=int, default=2021, help='random seed')
 
 # data loader
-parser.add_argument('--data', type=str, required=True, default='rearranged_gujarat', help='dataset type')
-parser.add_argument('--root_path', type=str, default='/content/drive/MyDrive/IITK-RITES/', help='root path of the data file')
-parser.add_argument('--data_path', type=str, default='rearranged_gujarat.csv', help='data file')
-parser.add_argument('--features', type=str, default='S',
+parser.add_argument('--data', type=str, required=True, default='ETTm1', help='dataset type')
+parser.add_argument('--root_path', type=str, default='./dataset', help='root path of the data file')
+parser.add_argument('--data_path', type=str, default='ETTh1.csv', help='data file')
+parser.add_argument('--features', type=str, default='M',
                     help='forecasting task, options:[M, S, MS]; '
                          'M:multivariate predict multivariate, S: univariate predict univariate, '
                          'MS:multivariate predict univariate')
-parser.add_argument('--target', type=str, default='Actual(MW)', help='target feature in S or MS task')
+parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
 parser.add_argument('--loader', type=str, default='modal', help='dataset type')
-parser.add_argument('--freq', type=str, default='t',
+parser.add_argument('--freq', type=str, default='h',
                     help='freq for time features encoding, '
                          'options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], '
                          'you can also use more detailed freq like 15min or 3h')
