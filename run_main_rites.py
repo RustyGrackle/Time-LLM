@@ -39,7 +39,7 @@ parser.add_argument('--seed', type=int, default=2021, help='random seed')
 # data loader
 parser.add_argument('--data', type=str, required=False, default='rearranged_gujarat', help='dataset type')
 parser.add_argument('--root_path', type=str, default='', help='root path of the data file')
-parser.add_argument('--data_path', type=str, default='/content/Time-LLM/dataset/rearranged_gujrat.csv', help='data file')
+parser.add_argument('--data_path', type=str, default='./dataset/rearranged_gujrat.csv', help='data file')
 parser.add_argument('--features', type=str, default='S',
                     help='forecasting task, options:[M, S, MS]; '
                          'M:multivariate predict multivariate, S: univariate predict univariate, '
