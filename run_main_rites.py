@@ -32,8 +32,8 @@ parser.add_argument('--task_name', type=str, required=False, default='long_term_
 parser.add_argument('--is_training', type=int, required=False, default=1, help='status')
 parser.add_argument('--model_id', type=str, required=False, default='test', help='model id')
 parser.add_argument('--model_comment', type=str, required=False, default='none', help='prefix when saving test results')
-parser.add_argument('--model', type=str, required=False, default='DLinear',
-                    help='model name, options: [Autoformer, DLinear]')
+parser.add_argument('--model', type=str, required=False, default='TimeLLM',
+                    help='model name, options: [Autoformer, DLinear, TimeLLM]')
 parser.add_argument('--seed', type=int, default=2021, help='random seed')
 
 # data loader
