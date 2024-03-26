@@ -130,6 +130,8 @@ for ii in range(args.itr):
         model = DLinear.Model(args).float()
     else:
         model = TimeLLM.Model(args).float()
+        for param in model.parameters():
+            param.data = param.data.to(torch.bfloat16)
 
     path = os.path.join(args.checkpoints,
                         setting + '-' + args.model_comment)  # unique checkpoint saving path
